@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>index html</div>
+    <input type="text" />
+    <script>
+        // const URL = "http://127.0.0.1:8080";
+        const URL = "http://localhost.charlesproxy.com:8080";
+        fetch(URL + "/xhr");
+      function sendByImage(src) {
+        var img = document.createElement("img");
+        img.src = src;
+      }
+     
+      function sendBeacon(data){
+        navigator.sendBeacon(URL + "/sendBeacon", JSON.stringify({ name: data||"张三" }));
+      }
+    //   document.addEventListener('visibilitychange', function logData() {
+    //     console.log(document.visibilityState)
+    //     if (document.visibilityState === 'hidden') {
+    //         console.log("hidden")
+    //         sendBeacon("hidden")
+    //     }
+    //     });
+      window.addEventListener("beforeunload", (event) => {
+       try {
+        fetch(URL + "/xhr");
+        sendByImage(URL + "/img");
+        sendBeacon()
+       } catch (error) {
+        fetch(URL + "/xhr-error");
+       }
+      });
+
+
+
+    //   window.addEventListener("unload", (event) => {
+    //     fetch(URL + "/xhr");
+    //     sendByImage(URL + "/img");
+    //     sendBeacon()
+    //   });
+
+
+
+
+    //   console.log(blob);
+      //   window.addEventListener("unload",()=>{
+      //     console.log("000")
+      //     fetch(URL+"/long")
+      //     navigator.sendBeacon(URL+"/track");
+      //   })
+
+    // 退出浏览器 xhr 有一次成功   img 成功   成功
+    // 强制退出 xhr 有时候可能失败  img 成功   成功
+    </script>
+  </body>
+</html>

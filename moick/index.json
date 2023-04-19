@@ -1,0 +1,63 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "activeStatus": "验证中",
+            "activeTimeStart": "2023-04-13 16:38:30",
+            "greySwitch": false,
+            "hasAB": false,
+            "isAdmin": true,
+            "modifier": "杨金福",
+            "releaseTime": "2023-04-13 16:35:36",
+            "ruleId": "961542651601625088",
+            "ruleVersionId": "963719087968317440",
+            "versionDesc": "V5",
+            "planId":"wewe",
+            "whiteList": [
+                "11111111111"
+            ],
+            "whiteListStr": "11111111111"
+        },
+        {
+            "activeStatus": "已生效",
+            "activeTimeStart": "2023-04-12 15:53:58",
+            "greySwitch": false,
+            "hasAB": false,
+            "isAdmin": true,
+            "modifier": "陈帅",
+            "releaseTime": "2023-04-12 15:53:59",
+            "ruleId": "961542651601625088",
+            "ruleVersionId": "963346227663720448",
+            "versionDesc": "V3",
+            "whiteList": []
+        },
+        {
+            "activeStatus": "已失效",
+            "activeTimeEnd": "2023-04-12 15:53:58",
+            "activeTimeStart": "2023-04-12 15:29:09",
+            "greySwitch": false,
+            "hasAB": false,
+            "isAdmin": true,
+            "modifier": "陈帅",
+            "releaseTime": "2023-04-12 15:29:10",
+            "ruleId": "961542651601625088",
+            "ruleVersionId": "963339981334241280",
+            "versionDesc": "V2",
+            "whiteList": []
+        },
+        {
+            "activeStatus": "已失效",
+            "activeTimeEnd": "2023-04-12 15:29:09",
+            "activeTimeStart": "2023-04-09 16:46:55",
+            "greySwitch": false,
+            "hasAB": false,
+            "isAdmin": true,
+            "modifier": "周楠乔",
+            "releaseTime": "2023-04-09 16:46:55",
+            "ruleId": "961542651601625088",
+            "ruleVersionId": "962272386967281664",
+            "versionDesc": "V1",
+            "whiteList": []
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+Arguments: 
+  /Users/hb24050/.nvm/versions/node/v12.18.1/bin/node /Users/hb24050/.nvm/versions/node/v12.18.1/bin/yarn
+
+PATH: 
+  /Users/hb24050/.nvm/versions/node/v12.18.1/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/hb24050/.nvm/versions/node/v12.18.1/bin:/usr/local/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  12.18.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@vue%2fcli-plugin-babel: ETIMEDOUT
+      at Timeout._onTimeout (/Users/hb24050/.nvm/versions/node/v12.18.1/lib/node_modules/yarn/lib/cli.js:141550:19)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
+
+npm manifest: 
+  {
+    "name": "build-vue-router",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+      "@vue/cli-plugin-babel": "4.1.1",
+      "vue": "^2.6.11",
+      "vue-router": "3.5.3"
+    },
+    "devDependencies": {
+      "@vue/cli-plugin-eslint": "4.1.1",
+      "@vue/cli-service": "4.1.1",
+      "babel-eslint": "^10.0.3",
+      "eslint": "^6.7.2",
+      "eslint-plugin-vue": "^6.0.1",
+      "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+      "root": true,
+      "env": {
+        "node": true
+      },
+      "extends": [
+        "plugin:vue/essential",
+        "eslint:recommended"
+      ],
+      "rules": {},
+      "parserOptions": {
+        "parser": "babel-eslint"
+      }
+    },
+    "postcss": {
+      "plugins": {
+        "autoprefixer": {}
+      }
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 8"
+    ],
+    "keywords": [],
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text">
+    <script src="./lifecycle.es5.js"></script>
+    <script>
+      const URL = "http://localhost.charlesproxy.com:8080";
+      const getFetch = (url)=>{
+        fetch(URL+url+'--fetch');
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",URL+url+"--xhr")
+        xhr.send()
+      }
+      function sendByImage(src) {
+        var img = document.createElement("img");
+        img.src = URL+src+"---img";
+      }
+
+      function sendBeacon(url) {
+        navigator.sendBeacon(
+          URL + url+"---sendBeacon",
+        );
+      }
+      lifecycle.addEventListener("statechange", function (event) {
+        console.log(event.oldState, event.newState);
+        const oldState = event.oldState;
+        const newState = event.newState;
+        const str = `/statechange:${oldState}-${newState}`
+        sendBeacon(str)
+        getFetch(str)
+        sendByImage(str)
+    //    if(newState == "terminated"){
+    //     sendBeacon(str)
+    //     getFetch(str)
+    //     sendByImage(str)
+    //    }
+      });
+    </script>
+  </body>
+</html>

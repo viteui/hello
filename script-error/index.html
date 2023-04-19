@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      const domain = ["https://dmona.com", "...."];
+      window.addEventListener( "error",
+        (e) => {
+          // 区别是否是JS 加载错误
+          const tag = e.target.localName;
+          if (tag === "link" || tag === "script") {
+            // 错误处理
+            console.log("p----");
+          }
+        },
+        true
+      );
+    </script>
+  </head>
+  <body>
+    <script src="https://otherdomain.xxx/2.js"></script>
+    <script src="/2.js"></script>
+    <script src="/3.js"></script>
+    <script>
+
+     // 同步方法需要放在最后面
+      let entries = performance.getEntries();
+      let failed = entries.filter((item) => item.transferSize === 0);
+      console.log(failed);
+    </script>
+  </body>
+</html>
